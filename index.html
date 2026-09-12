@@ -4,16 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Prayag Builders | Construction & Infrastructure</title>
+  <title>Prayag Builders | Construction & Development</title>
 
   <meta name="description"
-        content="Prayag Builders - Professional construction, modern buildings, renovation and infrastructure services in Prayagraj.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
-        rel="stylesheet">
+        content="Prayag Builders - Professional construction, modern buildings, renovation and property development services in Prayagraj.">
 
   <style>
     * {
@@ -24,87 +18,76 @@
     }
 
     body {
-      font-family: "Inter", sans-serif;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
       color: #222;
       background: #f7f7f7;
-      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
     }
 
     /* NAVBAR */
-
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      background: rgba(20,20,20,0.96);
-      backdrop-filter: blur(10px);
-    }
-
     nav {
-      max-width: 1200px;
-      margin: auto;
-      padding: 18px 25px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #111;
+      color: white;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      padding: 18px 7%;
     }
 
     .logo {
-      color: white;
       font-size: 23px;
-      font-weight: 800;
-      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
 
     .logo span {
       color: #d9a441;
     }
 
-    nav ul {
+    .nav-links {
       display: flex;
+      gap: 25px;
       list-style: none;
-      gap: 28px;
     }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover {
+    .nav-links a:hover {
       color: #d9a441;
     }
 
     /* HERO */
-
     .hero {
-      min-height: 100vh;
+      min-height: 90vh;
+      background:
+        linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.62)),
+        url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
       display: flex;
       align-items: center;
-      background:
-        linear-gradient(rgba(0,0,0,0.63), rgba(0,0,0,0.63)),
-        url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85")
-        center/cover no-repeat;
+      padding: 70px 7%;
       color: white;
-      padding: 120px 25px 80px;
     }
 
     .hero-content {
-      max-width: 1200px;
-      width: 100%;
-      margin: auto;
+      max-width: 720px;
     }
 
     .hero h1 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(42px, 7vw, 78px);
+      font-size: clamp(42px, 7vw, 76px);
       line-height: 1.05;
-      max-width: 800px;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     .hero h1 span {
@@ -112,25 +95,19 @@
     }
 
     .hero p {
-      max-width: 650px;
-      font-size: 18px;
+      font-size: 19px;
+      margin-bottom: 30px;
       color: #eee;
-      margin-bottom: 35px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 25px;
+      padding: 14px 24px;
+      margin-right: 10px;
+      margin-bottom: 10px;
       border-radius: 5px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: 0.3s;
+      font-weight: bold;
+      transition: .3s;
     }
 
     .btn-primary {
@@ -139,8 +116,7 @@
     }
 
     .btn-primary:hover {
-      transform: translateY(-3px);
-      background: #efc15d;
+      background: white;
     }
 
     .btn-outline {
@@ -153,140 +129,88 @@
       color: #111;
     }
 
-    /* GENERAL */
-
+    /* SECTIONS */
     section {
-      padding: 90px 25px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
+      padding: 80px 7%;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 55px;
-    }
-
-    .section-title small {
-      color: #b1842f;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      margin-bottom: 45px;
     }
 
     .section-title h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 42px;
-      margin-top: 8px;
+      font-size: 38px;
+      margin-bottom: 10px;
     }
 
     .section-title p {
-      max-width: 650px;
-      margin: 12px auto 0;
       color: #666;
     }
 
     /* ABOUT */
-
     .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
       background: white;
     }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .about-img img {
-      width: 100%;
-      height: 480px;
+    .about img {
+      height: 450px;
       object-fit: cover;
       border-radius: 8px;
     }
 
-    .about-text h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 34px;
+    .about-text h2 {
+      font-size: 40px;
       margin-bottom: 20px;
     }
 
     .about-text p {
-      color: #666;
+      color: #555;
       margin-bottom: 18px;
     }
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      margin-top: 30px;
-    }
-
-    .stat {
-      padding: 20px;
-      background: #f4f4f4;
-      text-align: center;
-      border-radius: 6px;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 27px;
-      color: #b1842f;
-    }
-
-    .stat span {
-      font-size: 12px;
-      color: #666;
-    }
-
     /* SERVICES */
-
     .services {
       background: #f3f3f3;
     }
 
-    .service-grid {
+    .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 25px;
     }
 
-    .service {
+    .card {
       background: white;
-      padding: 35px 28px;
+      padding: 30px;
       border-radius: 8px;
-      transition: 0.3s;
-      border-bottom: 3px solid transparent;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+      transition: .3s;
     }
 
-    .service:hover {
+    .card:hover {
       transform: translateY(-7px);
-      border-bottom-color: #d9a441;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
     }
 
     .icon {
       font-size: 38px;
-      margin-bottom: 18px;
+      margin-bottom: 15px;
     }
 
-    .service h3 {
+    .card h3 {
       margin-bottom: 10px;
-      font-size: 20px;
+      font-size: 22px;
     }
 
-    .service p {
+    .card p {
       color: #666;
-      font-size: 14px;
     }
 
     /* PROJECTS */
-
     .projects {
       background: white;
     }
@@ -294,7 +218,7 @@
     .project-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 25px;
     }
 
     .project {
@@ -306,10 +230,9 @@
     }
 
     .project img {
-      width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: 0.5s;
+      transition: .5s;
     }
 
     .project:hover img {
@@ -322,667 +245,185 @@
       width: 100%;
       padding: 25px;
       color: white;
-      background: linear-gradient(transparent, rgba(0,0,0,0.85));
+      background: linear-gradient(transparent, rgba(0,0,0,.9));
     }
 
     .project-info h3 {
-      font-size: 20px;
-    }
-
-    .project-info p {
-      font-size: 13px;
-      opacity: 0.9;
+      font-size: 23px;
     }
 
     /* WHY US */
-
     .why {
-      background: #171717;
+      background: #111;
       color: white;
     }
 
     .why .section-title p {
-      color: #aaa;
+      color: #bbb;
     }
 
     .why-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
+      text-align: center;
     }
 
-    .why-card {
-      text-align: center;
+    .why-box {
       padding: 25px;
     }
 
-    .why-card .icon {
-      font-size: 35px;
+    .why-box strong {
+      display: block;
+      font-size: 40px;
+      color: #d9a441;
+      margin-bottom: 5px;
     }
 
-    .why-card h3 {
-      margin-bottom: 8px;
+    /* PROCESS */
+    .process {
+      background: #f3f3f3;
     }
 
-    .why-card p {
-      color: #aaa;
-      font-size: 14px;
-    }
-
-    /* GALLERY */
-
-    .gallery {
-      background: #f5f5f5;
-    }
-
-    .gallery-grid {
+    .process-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      text-align: center;
+      background: white;
+      padding: 30px 20px;
+      border-radius: 8px;
+    }
+
+    .step-number {
+      width: 55px;
+      height: 55px;
+      margin: auto auto 15px;
+      border-radius: 50%;
+      background: #d9a441;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    /* QUOTE */
+    .quote {
+      background:
+        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+      color: white;
+    }
+
+    .quote-container {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .quote form {
+      display: grid;
       gap: 15px;
     }
 
-    .gallery-grid img {
+    .quote input,
+    .quote textarea,
+    .quote select {
       width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 6px;
-      transition: 0.3s;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
     }
 
-    .gallery-grid img:hover {
-      transform: scale(1.03);
-    }
-
-    /* CTA */
-
-    .cta {
-      background:
-        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=85")
-        center/cover no-repeat;
-      color: white;
-      text-align: center;
-    }
-
-    .cta h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 45px;
-      margin-bottom: 15px;
-    }
-
-    .cta p {
-      color: #ddd;
-      margin-bottom: 30px;
+    .quote textarea {
+      height: 130px;
+      resize: vertical;
     }
 
     /* CONTACT */
-
     .contact {
       background: white;
     }
 
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      text-align: center;
     }
 
-    .contact-info h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-
-    .contact-item {
-      margin: 20px 0;
-    }
-
-    .contact-item strong {
-      display: block;
-      color: #b1842f;
-      margin-bottom: 3px;
-    }
-
-    .contact-item a {
-      color: #222;
-      text-decoration: none;
-    }
-
-    .quote-form {
-      background: #f5f5f5;
+    .contact-box {
       padding: 30px;
+      background: #f5f5f5;
       border-radius: 8px;
     }
 
-    .quote-form h3 {
-      margin-bottom: 20px;
+    .contact-box h3 {
+      margin-bottom: 10px;
     }
 
-    input,
-    textarea,
-    select {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 14px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-family: inherit;
-      font-size: 14px;
-      outline: none;
-    }
-
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    input:focus,
-    textarea:focus,
-    select:focus {
-      border-color: #b1842f;
-    }
-
-    button {
-      width: 100%;
-      border: none;
-      padding: 15px;
-      background: #d9a441;
-      color: #111;
-      font-weight: 800;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 15px;
-    }
-
-    button:hover {
-      background: #efc15d;
+    .contact-box p {
+      color: #555;
     }
 
     /* FOOTER */
-
     footer {
-      background: #111;
-      color: #aaa;
+      background: #0b0b0b;
+      color: white;
       text-align: center;
-      padding: 30px 20px;
+      padding: 30px 7%;
     }
 
-    footer strong {
-      color: white;
-    }
-
-    /* WHATSAPP */
-
-    .whatsapp {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: #25D366;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 27px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.25);
-      z-index: 999;
+    footer span {
+      color: #d9a441;
     }
 
     /* MOBILE */
+    @media (max-width: 800px) {
 
-    @media (max-width: 900px) {
-
-      nav ul {
+      .nav-links {
         display: none;
       }
 
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
+      .hero {
+        min-height: 80vh;
+        padding: 60px 6%;
       }
-
-      .service-grid,
-      .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .why-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
 
       section {
-        padding: 70px 18px;
+        padding: 60px 6%;
       }
 
-      .hero {
-        padding-left: 18px;
-        padding-right: 18px;
-      }
-
-      .hero h1 {
-        font-size: 45px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .section-title h2 {
-        font-size: 34px;
-      }
-
-      .service-grid,
-      .project-grid,
-      .why-grid,
-      .gallery-grid {
+      .about {
         grid-template-columns: 1fr;
       }
 
-      .about-img img {
-        height: 330px;
-      }
-
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .project {
+      .about img {
         height: 300px;
       }
 
-      .cta h2 {
-        font-size: 34px;
+      .cards,
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid,
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
       }
     }
-  </style>
-</head>
 
-<body>
+    @media (max-width: 500px) {
 
-  <!-- NAVBAR -->
-
-  <header>
-    <nav>
-      <a href="#home" class="logo">
-        PRAYAG<span>BUILDERS</span>
-      </a>
-
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-
-  <!-- HERO -->
-
-  <section class="hero" id="home">
-    <div class="hero-content">
-
-      <h1>
-        Building The
-        <span>Future.</span>
-      </h1>
-
-      <p>
-        Professional construction and infrastructure solutions
-        designed with quality, precision and modern engineering.
-      </p>
-
-      <div class="buttons">
-        <a href="#contact" class="btn btn-primary">
-          Get a Free Quote
-        </a>
-
-        <a href="#projects" class="btn btn-outline">
-          View Projects
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ABOUT -->
-
-  <section class="about" id="about">
-    <div class="container">
-
-      <div class="section-title">
-        <small>Who We Are</small>
-        <h2>About Prayag Builders</h2>
-        <p>
-          Creating strong spaces with modern engineering and
-          dependable construction.
-        </p>
-      </div>
-
-      <div class="about-grid">
-
-        <div class="about-img">
-          <img
-            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85"
-            alt="Construction workers at a building site">
-        </div>
-
-        <div class="about-text">
-
-          <h3>
-            Quality Construction.
-            Built To Last.
-          </h3>
-
-          <p>
-            Prayag Builders provides professional construction
-            solutions for residential, commercial and modern
-            infrastructure projects.
-          </p>
-
-          <p>
-            Our focus is on quality materials, reliable
-            workmanship, modern design and timely project
-            completion.
-          </p>
-
-          <div class="stats">
-
-            <div class="stat">
-              <strong>10+</strong>
-              <span>Years Experience</span>
-            </div>
-
-            <div class="stat">
-              <strong>100+</strong>
-              <span>Projects</span>
-            </div>
-
-            <div class="stat">
-              <strong>100%</strong>
-              <span>Commitment</span>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- SERVICES -->
-
-  <section class="services" id="services">
-    <div class="container">
-
-      <div class="section-title">
-        <small>What We Do</small>
-        <h2>Our Services</h2>
-        <p>
-          Complete construction solutions for modern spaces.
-        </p>
-      </div>
-
-      <div class="service-grid">
-
-        <div class="service">
-          <div class="icon">🏗️</div>
-          <h3>Building Construction</h3>
-          <p>
-            Complete residential and commercial building
-            construction with professional execution.
-          </p>
-        </div>
-
-        <div class="service">
-          <div class="icon">🏢</div>
-          <h3>Modern Buildings</h3>
-          <p>
-            Contemporary buildings combining functionality,
-            design and modern architecture.
-          </p>
-        </div>
-
-        <div class="service">
-          <div class="icon">🛗</div>
-          <h3>Elevator Modelling</h3>
-          <p>
-            Planning and modelling solutions for modern
-            elevator and vertical transportation systems.
-          </p>
-        </div>
-
-        <div class="service">
-          <div class="icon">🏠</div>
-          <h3>Residential Projects</h3>
-          <p>
-            Quality homes designed and constructed according
-            to your requirements.
-          </p>
-        </div>
-
-        <div class="service">
-          <div class="icon">🏬</div>
-          <h3>Commercial Projects</h3>
-          <p>
-            Professional construction for offices,
-            commercial buildings and business spaces.
-          </p>
-        </div>
-
-        <div class="service">
-          <div class="icon">🔧</div>
-          <h3>Renovation</h3>
-          <p>
-            Renovation and improvement solutions to modernize
-            existing buildings and spaces.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- PROJECTS -->
-
-  <section class="projects" id="projects">
-    <div class="container">
-
-      <div class="section-title">
-        <small>Our Work</small>
-        <h2>Featured Projects</h2>
-        <p>
-          A selection of modern construction concepts and projects.
-        </p>
-      </div>
-
-      <div class="project-grid">
-
-        <div class="project">
-          <img
-            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
-            alt="Modern residential building">
-
-          <div class="project-info">
-            <h3>Modern Residence</h3>
-            <p>Residential Construction</p>
-          </div>
-        </div>
-
-
-        <div class="project">
-          <img
-            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85"
-            alt="Modern commercial interior">
-
-          <div class="project-info">
-            <h3>Corporate Space</h3>
-            <p>Commercial Construction</p>
-          </div>
-        </div>
-
-
-        <div class="project">
-          <img
-            src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=85"
-            alt="Modern architecture">
-
-          <div class="project-info">
-            <h3>Modern Architecture</h3>
-            <p>Architectural Project</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- WHY CHOOSE US -->
-
-  <section class="why">
-    <div class="container">
-
-      <div class="section-title">
-        <small>Why Us</small>
-        <h2>Why Choose Prayag Builders?</h2>
-        <p>
-          We focus on quality, reliability and professional execution.
-        </p>
-      </div>
-
-      <div class="why-grid">
-
-        <div class="why-card">
-          <div class="icon">⭐</div>
-          <h3>Quality</h3>
-          <p>
-            High-quality materials and professional workmanship.
-          </p>
-        </div>
-
-        <div class="why-card">
-          <div class="icon">⏱️</div>
-          <h3>On Time</h3>
-          <p>
-            Organized project planning for timely completion.
-          </p>
-        </div>
-
-        <div class="why-card">
-          <div class="icon">📐</div>
-          <h3>Precision</h3>
-          <p>
-            Careful planning and accurate construction execution.
-          </p>
-        </div>
-
-        <div class="why-card">
-          <div class="icon">🤝</div>
-          <h3>Trust</h3>
-          <p>
-            Transparent communication and dependable service.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- GALLERY -->
-
-  <section class="gallery" id="gallery">
-    <div class="container">
-
-      <div class="section-title">
-        <small>Gallery</small>
-        <h2>Our Construction World</h2>
-      </div>
-
-      <div class="gallery-grid">
-
-        <img
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85"
-          alt="Construction site">
-
-        <img
-          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=85"
-          alt="Architectural building">
-
-        <img
-          src="https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&w=900&q=85"
-          alt="Construction workers">
-
-        <img
-          src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=85"
-          alt="Modern house">
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- CALL TO ACTION -->
-
-  <section class="cta">
-
-    <div class="container">
-
-      <h2>
-        Let's Build Something Great.
-      </h2>
-
-      <p>
-        Have a construction project in mind?
-        Talk to Prayag Builders today.
-      </p>
-
-      <a href="#contact" class="btn btn-primary">
-        Request a Quote
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-
-  <section class="contact" id="contact">
-
-    <div class="container">
-
-      <div class="section-title">
-        <small>Get In Touch</small>
-        <h2>Contact Us</h2>
-        <p>
-          Tell us about your project and we'll get back to you.
-        </p>
-      </div>
-
-      <div class="contact-grid">
-
-        <div class="contact-info">
-
-          <h3>
-            Start Your Project
-          </h3>
-
-          <div class
-     
+      .why-grid,
+      .process-grid {
+        grid-template-columns: 
